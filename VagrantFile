@@ -1,0 +1,7 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/artful64"
+  config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.network :forwarded_port, guest: 8000, host: 8001
+	config.vm.synced_folder "shared_vagrant_folder", "/home/vagrant/shared_vagrant_folder"
+  config.vm.provision :shell, :path => "deploy/bootstrap.sh"
+end
