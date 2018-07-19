@@ -1,0 +1,1 @@
+This file exists merely to ensure GitHub maintains this empty shared folder as it will be needed during installation/configuration of the Virtual Machine.
